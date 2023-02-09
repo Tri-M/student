@@ -51,7 +51,6 @@ public class StudentController {
 	public String updateStudent(@PathVariable int id,
 			@ModelAttribute("student") Student student,
 			Model model) {
-		
 		Student existingStudent = studentService.getStudentById(id);
 		existingStudent.setId(id);
 		existingStudent.setFirstName(student.getFirstName());
