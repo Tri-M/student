@@ -34,7 +34,7 @@
 			<div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
 				<h1 class = "text-center"> Create New Student </h1>
 				<div class = "card-body">
-					<form th:action="@{/students}" th:object = "${student}" method="POST">
+					<form th:action="@{/stud}" th:object = "${student}" method="POST">
 						<div class ="form-group">
 							<label> Student First Name </label>
 							<input
@@ -69,7 +69,7 @@
 						</div>
 						
 						<div class = "box-footer">
-							<button action="@{/students}" type="submit" class = "btn btn-primary">
+							<button type="submit" class = "btn btn-primary">
 								Submit
 							</button>
 						</div>

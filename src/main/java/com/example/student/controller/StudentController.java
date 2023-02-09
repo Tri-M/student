@@ -20,7 +20,7 @@ public class StudentController {
 		this.studentService = studentService;
 	}
 	
-	// handler method to handle list students and return mode and view
+	
 	@GetMapping("/students")
 	public String listStudents(Model model) {
 		model.addAttribute("students", studentService.getAllStudents());
@@ -36,7 +36,7 @@ public class StudentController {
 		
 	}
 	
-	@PostMapping("/students")
+	@PostMapping("/stud")
 	public String saveStudent(@ModelAttribute("student") Student student) {
 		studentService.saveStudent(student);
 		return "redirect:/students";
@@ -53,7 +53,6 @@ public class StudentController {
 			@ModelAttribute("student") Student student,
 			Model model) {
 		
-		// get student from database by id
 		Student existingStudent = studentService.getStudentById(id);
 		existingStudent.setId(id);
 		existingStudent.setFirstName(student.getFirstName());
