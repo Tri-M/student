@@ -6,7 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.example.student.entity.Student;
 import com.example.student.repository.StudentRepository;
-
 @SpringBootApplication
 public class StudentManagementSystemApplication implements CommandLineRunner{
 
